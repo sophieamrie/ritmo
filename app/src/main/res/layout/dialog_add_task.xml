@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    android:background="@drawable/bg_dialog"
+    android:elevation="8dp">
+
+    <!-- title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Task"
+        android:textSize="18sp"
+        android:textColor="#3D3530"
+        android:fontFamily="@font/lora_semibold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- task title input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Task title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_extrabold"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- task description input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description (optional)"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTaskDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_extrabold"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- tag selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAG"
+        android:textSize="10sp"
+        android:textColor="#9B8E87"
+        android:fontFamily="@font/nunito_extrabold"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btnTagPersonal"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Personal"
+            android:textSize="10sp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:backgroundTint="#EDE8F8"
+            android:textColor="#7b9c9c"/>
+
+        <Button
+            android:id="@+id/btnTagStudy"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Study"
+            android:textSize="10sp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:backgroundTint="#FDE8DF"
+            android:textColor="#F2A58E"
+            android:alpha="0.4"/>
+
+        <Button
+            android:id="@+id/btnTagHealth"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="Health"
+            android:textSize="10sp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:backgroundTint="#E0EDD9"
+            android:textColor="#5a9451"
+            android:alpha="0.4"/>
+
+    </LinearLayout>
+
+    <!-- buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="Cancel"
+            android:fontFamily="@font/nunito_extrabold"
+            android:backgroundTint="#F3EFEA"
+            android:textColor="#9B8E87"/>
+
+        <Button
+            android:id="@+id/btnSaveTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:fontFamily="@font/nunito_extrabold"
+            android:backgroundTint="#F2A58E"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</LinearLayout>

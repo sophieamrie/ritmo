@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="8dp"
+    android:layout_marginEnd="4dp">
+
+    <TextView
+        android:id="@+id/tvForecastDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUN"
+        android:textSize="9sp"
+        android:textColor="#9B8E87"
+        android:fontFamily="@font/nunito_extrabold"
+        android:letterSpacing="0.1"/>
+
+    <TextView
+        android:id="@+id/tvForecastIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="☀️"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/tvForecastTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28°"
+        android:textSize="11sp"
+        android:textColor="#3D3530"
+        android:fontFamily="@font/nunito_extrabold"/>
+
+</LinearLayout>

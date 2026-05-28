@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/taskFragment">
+
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.ritmo.ui.task.TaskFragment"
+        android:label="Tasks"
+        tools:layout="@layout/fragment_task">
+        <action
+            android:id="@+id/action_task_to_habit"
+            app:destination="@+id/habitFragment" />
+        <action
+            android:id="@+id/action_task_to_weather"
+            app:destination="@+id/weatherFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/habitFragment"
+        android:name="com.example.ritmo.ui.habit.HabitFragment"
+        android:label="Habits"
+        tools:layout="@layout/fragment_habit">
+        <action
+            android:id="@+id/action_habit_to_task"
+            app:destination="@+id/taskFragment" />
+        <action
+            android:id="@+id/action_habit_to_weather"
+            app:destination="@+id/weatherFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.ritmo.ui.weather.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/fragment_weather">
+        <action
+            android:id="@+id/action_weather_to_task"
+            app:destination="@+id/taskFragment" />
+        <action
+            android:id="@+id/action_weather_to_habit"
+            app:destination="@+id/habitFragment" />
+    </fragment>
+
+</navigation>

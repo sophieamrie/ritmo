@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- checkbox -->
+        <CheckBox
+            android:id="@+id/checkTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#F2A58E"/>
+
+        <!-- task info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <TextView
+                android:id="@+id/tvTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task name"
+                android:textColor="#3D3530"
+                android:fontFamily="@font/nunito_extrabold"/>
+
+            <TextView
+                android:id="@+id/tvTaskTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="08.00 AM"
+                android:textSize="10sp"
+                android:textColor="#9B8E87"
+                android:fontFamily="@font/nunito"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- tag -->
+        <TextView
+            android:id="@+id/tvTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal"
+            android:textSize="9sp"
+            android:fontFamily="@font/nunito_extrabold"
+            android:paddingStart="9dp"
+            android:paddingEnd="9dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/bg_tag"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- delete button -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#9B8E87"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

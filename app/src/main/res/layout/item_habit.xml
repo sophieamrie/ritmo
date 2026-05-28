@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Habit icon -->
+        <TextView
+            android:id="@+id/tvHabitIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:background="@drawable/bg_habit_icon"
+            android:text="⭐"/>
+
+        <!-- Habit info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvHabitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Habit name"
+                android:textSize="13sp"
+                android:textColor="#3D3530"
+                android:fontFamily="@font/nunito_extrabold"/>
+
+            <TextView
+                android:id="@+id/tvHabitStreak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 0 days"
+                android:textSize="10sp"
+                android:textColor="#9B8E87"
+                android:fontFamily="@font/nunito"
+                android:layout_marginTop="2dp"/>
+
+        </LinearLayout>
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/checkHabit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#A8C5A0"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Delete button -->
+        <ImageButton
+            android:id="@+id/btnDeleteHabit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="#9B8E87"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
