@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:background="#F2A58E"/>
+        android:background="@drawable/bg_sunrise"/>
 
     <!-- Greeting text -->
     <LinearLayout
@@ -80,6 +80,42 @@
                 android:fontFamily="@font/nunito_extrabold"
                 android:layout_marginBottom="10dp"/>
 
+            <!-- Empty state -->
+            <LinearLayout
+                android:id="@+id/emptyStateTask"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="32dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌸"
+                    android:textSize="48sp"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No tasks yet!"
+                    android:textSize="16sp"
+                    android:textColor="#3D3530"
+                    android:fontFamily="@font/lora_semibold"
+                    android:layout_marginBottom="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap + to add your first task"
+                    android:textSize="12sp"
+                    android:textColor="#9B8E87"
+                    android:fontFamily="@font/nunito_extrabold"/>
+
+            </LinearLayout>
+
             <!-- Task list -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvTasks"
@@ -94,40 +130,72 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/navTasks"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="✅ Tasks"
-                    android:textColor="#F2A58E"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/nunito_extrabold"/>
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_task"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tasks"
+                        android:textColor="#F2A58E"
+                        android:textSize="9sp"
+                        android:fontFamily="@font/nunito_extrabold"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/navHabits"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="🌿 Habits"
-                    android:textColor="#9B8E87"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/nunito_extrabold"/>
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_habit"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Habits"
+                        android:textColor="#9B8E87"
+                        android:textSize="9sp"
+                        android:fontFamily="@font/nunito_extrabold"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:id="@+id/navWeather"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="🌤 Weather"
-                    android:textColor="#9B8E87"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/nunito_extrabold"/>
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_weather"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weather"
+                        android:textColor="#9B8E87"
+                        android:textSize="9sp"
+                        android:fontFamily="@font/nunito_extrabold"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
 
             </LinearLayout>
 

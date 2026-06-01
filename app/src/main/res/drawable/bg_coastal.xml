@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1080dp"
+    android:height="1920dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="1920">
+
+    <!-- Sky -->
+    <path android:fillColor="#6BB8D4"
+        android:pathData="M0,0 L1080,0 L1080,1920 L0,1920 Z"/>
+
+    <!-- Sun glow -->
+    <path android:fillColor="#FFE696" android:fillAlpha="0.2"
+        android:pathData="M780,320 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0"/>
+    <path android:fillColor="#FFE696" android:fillAlpha="0.3"
+        android:pathData="M780,320 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0"/>
+    <path android:fillColor="#FFEE80" android:fillAlpha="0.6"
+        android:pathData="M780,320 m-55,0 a55,55 0 1,0 110,0 a55,55 0 1,0 -110,0"/>
+
+    <!-- Sun rays -->
+    <path android:strokeColor="#FFE696" android:strokeWidth="8"
+        android:strokeAlpha="0.5" android:fillColor="#00000000"
+        android:pathData="M780,220 L780,190"/>
+    <path android:strokeColor="#FFE696" android:strokeWidth="8"
+        android:strokeAlpha="0.5" android:fillColor="#00000000"
+        android:pathData="M860,260 L885,235"/>
+    <path android:strokeColor="#FFE696" android:strokeWidth="8"
+        android:strokeAlpha="0.5" android:fillColor="#00000000"
+        android:pathData="M700,260 L675,235"/>
+
+    <!-- Rolling green hills -->
+    <path android:fillColor="#7ABF8E" android:fillAlpha="0.5"
+        android:pathData="M0,800 Q160,640 320,720 Q480,800 640,660 Q800,520 1080,680 L1080,1100 L0,1100 Z"/>
+    <path android:fillColor="#6AAF7E" android:fillAlpha="0.65"
+        android:pathData="M0,920 Q140,760 340,840 Q520,920 680,760 Q820,620 1080,780 L1080,1150 L0,1150 Z"/>
+    <path android:fillColor="#5AAA78" android:fillAlpha="0.75"
+        android:pathData="M0,1060 Q160,940 380,1000 Q580,1060 760,960 Q900,880 1080,960 L1080,1200 L0,1200 Z"/>
+
+    <!-- Big fluffy cloud -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.88"
+        android:pathData="M200,500 m-170,0 a170,90 0 1,0 340,0 a170,90 0 1,0 -340,0"/>
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.85"
+        android:pathData="M330,460 m-120,0 a120,80 0 1,0 240,0 a120,80 0 1,0 -240,0"/>
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.82"
+        android:pathData="M100,490 m-100,0 a100,70 0 1,0 200,0 a100,70 0 1,0 -200,0"/>
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.8"
+        android:pathData="M230,430 m-88,0 a88,65 0 1,0 176,0 a88,65 0 1,0 -176,0"/>
+
+    <!-- Small cloud -->
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.65"
+        android:pathData="M820,560 m-90,0 a90,45 0 1,0 180,0 a90,45 0 1,0 -180,0"/>
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.6"
+        android:pathData="M900,545 m-65,0 a65,40 0 1,0 130,0 a65,40 0 1,0 -130,0"/>
+
+    <!-- Sea -->
+    <path android:fillColor="#5AAABB" android:fillAlpha="0.85"
+        android:pathData="M0,1200 L1080,1200 L1080,1920 L0,1920 Z"/>
+
+    <!-- Sun sparkle on sea -->
+    <path android:fillColor="#FFEE80" android:fillAlpha="0.45"
+        android:pathData="M780,1280 m-110,0 a110,25 0 1,0 220,0 a110,25 0 1,0 -220,0"/>
+    <path android:fillColor="#FFEE80" android:fillAlpha="0.3"
+        android:pathData="M800,1320 m-65,0 a65,15 0 1,0 130,0 a65,15 0 1,0 -130,0"/>
+
+    <!-- Sailboat -->
+    <path android:fillColor="#8B6F5E" android:fillAlpha="0.8"
+        android:pathData="M470,1200 L470,1195 L580,1195 L580,1200 Q525,1210 470,1200 Z"/>
+    <path android:fillColor="#FFFFFF" android:fillAlpha="0.85"
+        android:pathData="M520,1195 L520,1110 L580,1180 Z"/>
+    <path android:fillColor="#FFE0B0" android:fillAlpha="0.75"
+        android:pathData="M520,1195 L520,1120 L465,1185 Z"/>
+
+    <!-- Birds -->
+    <path android:strokeColor="#2D5050" android:strokeWidth="5"
+        android:strokeAlpha="0.45" android:fillColor="#00000000"
+        android:pathData="M210,620 Q240,590 270,620"/>
+    <path android:strokeColor="#2D5050" android:strokeWidth="5"
+        android:strokeAlpha="0.45" android:fillColor="#00000000"
+        android:pathData="M280,580 Q315,545 350,580"/>
+    <path android:strokeColor="#2D5050" android:strokeWidth="4"
+        android:strokeAlpha="0.35" android:fillColor="#00000000"
+        android:pathData="M160,660 L185,638 L210,660"/>
+
+</vector>
