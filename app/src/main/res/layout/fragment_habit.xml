@@ -6,12 +6,12 @@
     android:layout_height="match_parent">
 
     <!-- Full bleed night scenery background -->
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sceneryBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:background="@drawable/bg_dusk"/>
+        app:srcCompat="@drawable/bg_dusk"/>
 
     <!-- Streak badge -->
     <TextView

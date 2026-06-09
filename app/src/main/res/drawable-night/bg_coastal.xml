@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1080dp"
+    android:height="1920dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="1920">
+
+    <!-- Sky - dark teal -->
+    <path android:fillColor="#0D1F2D"
+        android:pathData="M0,0 L1080,0 L1080,1920 L0,1920 Z"/>
+
+    <!-- Moon glow -->
+    <path android:fillColor="#B0D4E8" android:fillAlpha="0.15"
+        android:pathData="M780,320 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0"/>
+    <path android:fillColor="#C8E4F0" android:fillAlpha="0.22"
+        android:pathData="M780,320 m-95,0 a95,95 0 1,0 190,0 a95,95 0 1,0 -190,0"/>
+    <path android:fillColor="#E0F0F8" android:fillAlpha="0.5"
+        android:pathData="M780,320 m-55,0 a55,55 0 1,0 110,0 a55,55 0 1,0 -110,0"/>
+
+    <!-- Stars -->
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.8"
+        android:pathData="M200,200 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.7"
+        android:pathData="M400,150 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.75"
+        android:pathData="M550,250 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.65"
+        android:pathData="M150,350 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"/>
+
+    <!-- Rolling hills - dark green -->
+    <path android:fillColor="#0F2318" android:fillAlpha="0.95"
+        android:pathData="M0,800 Q160,640 320,720 Q480,800 640,660 Q800,520 1080,680 L1080,1100 L0,1100 Z"/>
+    <path android:fillColor="#0A1C12" android:fillAlpha="0.98"
+        android:pathData="M0,920 Q140,760 340,840 Q520,920 680,760 Q820,620 1080,780 L1080,1150 L0,1150 Z"/>
+    <path android:fillColor="#071510"
+        android:pathData="M0,1060 Q160,940 380,1000 Q580,1060 760,960 Q900,880 1080,960 L1080,1200 L0,1200 Z"/>
+
+    <!-- Dark clouds -->
+    <path android:fillColor="#1A2E3A" android:fillAlpha="0.9"
+        android:pathData="M200,500 m-170,0 a170,90 0 1,0 340,0 a170,90 0 1,0 -340,0"/>
+    <path android:fillColor="#1E3340" android:fillAlpha="0.85"
+        android:pathData="M330,460 m-120,0 a120,80 0 1,0 240,0 a120,80 0 1,0 -240,0"/>
+    <path android:fillColor="#162830" android:fillAlpha="0.88"
+        android:pathData="M100,490 m-100,0 a100,70 0 1,0 200,0 a100,70 0 1,0 -200,0"/>
+
+    <!-- Sea - dark -->
+    <path android:fillColor="#0A1828"
+        android:pathData="M0,1200 L1080,1200 L1080,1920 L0,1920 Z"/>
+
+    <!-- Moon reflection on sea -->
+    <path android:fillColor="#B0D4E8" android:fillAlpha="0.2"
+        android:pathData="M780,1280 m-110,0 a110,25 0 1,0 220,0 a110,25 0 1,0 -220,0"/>
+
+    <!-- Sailboat -->
+    <path android:fillColor="#2A3840" android:fillAlpha="0.8"
+        android:pathData="M470,1200 L470,1195 L580,1195 L580,1200 Q525,1210 470,1200 Z"/>
+    <path android:fillColor="#3A4A54" android:fillAlpha="0.7"
+        android:pathData="M520,1195 L520,1110 L580,1180 Z"/>
+    <path android:fillColor="#2E3C46" android:fillAlpha="0.65"
+        android:pathData="M520,1195 L520,1120 L465,1185 Z"/>
+
+</vector>

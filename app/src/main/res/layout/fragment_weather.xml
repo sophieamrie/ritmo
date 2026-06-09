@@ -6,12 +6,12 @@
     android:layout_height="match_parent">
 
     <!-- Full bleed coastal scenery background -->
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sceneryBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:background="@drawable/bg_coastal"/>
+        app:srcCompat="@drawable/bg_coastal"/>
 
     <!-- Temperature display -->
     <LinearLayout
@@ -38,6 +38,18 @@
             android:textColor="#DDFFFFFF"
             android:textSize="13sp"
             android:fontFamily="@font/nunito_extrabold"/>
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:visibility="gone"
+            android:fontFamily="@font/nunito_extrabold"
+            android:backgroundTint="#F2A58E"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
 
     </LinearLayout>
 
@@ -185,7 +197,7 @@
                         android:padding="10dp">
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🌡️" android:textSize="18sp" android:layout_marginBottom="2dp"/>
                         <TextView android:id="@+id/tvUV" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="UV 4" android:textSize="16sp" android:textColor="#3D3530" android:fontFamily="@font/lora_semibold"/>
-                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="INDEX" android:textSize="8sp" android:textColor="#9B8E87" android:fontFamily="@font/nunito_extrabold" android:letterSpacing="0.1"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="FEELS LIKE" android:textSize="8sp" android:textColor="#9B8E87" android:fontFamily="@font/nunito_extrabold" android:letterSpacing="0.1"/>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

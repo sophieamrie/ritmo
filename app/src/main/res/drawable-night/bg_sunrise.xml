@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1080dp"
+    android:height="1920dp"
+    android:viewportWidth="1080"
+    android:viewportHeight="1920">
+
+    <!-- Sky - dark navy -->
+    <path android:fillColor="#1A1A2E"
+        android:pathData="M0,0 L1080,0 L1080,1920 L0,1920 Z"/>
+
+    <!-- Moon glow -->
+    <path android:fillColor="#FFE8A0" android:fillAlpha="0.15"
+        android:pathData="M850,400 m-120,0 a120,120 0 1,0 240,0 a120,120 0 1,0 -240,0"/>
+    <path android:fillColor="#FFE8A0" android:fillAlpha="0.22"
+        android:pathData="M850,400 m-75,0 a75,75 0 1,0 150,0 a75,75 0 1,0 -150,0"/>
+    <path android:fillColor="#FFE8A0" android:fillAlpha="0.45"
+        android:pathData="M850,400 m-40,0 a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0"/>
+
+    <!-- Stars -->
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.8"
+        android:pathData="M200,200 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.7"
+        android:pathData="M400,150 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.75"
+        android:pathData="M600,250 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.65"
+        android:pathData="M150,350 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"/>
+    <path android:fillColor="#FFFFDC" android:fillAlpha="0.7"
+        android:pathData="M700,180 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0"/>
+
+    <!-- Far mountains - dark purple -->
+    <path android:fillColor="#2D2B55" android:fillAlpha="0.9"
+        android:pathData="M0,750 Q150,500 300,620 Q500,750 600,520 Q720,320 850,480 Q950,580 1080,520 L1080,1050 L0,1050 Z"/>
+
+    <!-- Mid mountains -->
+    <path android:fillColor="#252350" android:fillAlpha="0.95"
+        android:pathData="M0,880 Q120,700 280,760 Q460,830 600,650 Q740,480 900,600 Q1000,670 1080,620 L1080,1100 L0,1100 Z"/>
+
+    <!-- Near hills -->
+    <path android:fillColor="#1E1C45"
+        android:pathData="M0,1020 Q160,920 360,960 Q540,1000 720,920 Q860,860 1080,920 L1080,1200 L0,1200 Z"/>
+
+    <!-- Cherry blossom tree trunk -->
+    <path android:fillColor="#4A3860"
+        android:pathData="M80,1200 L100,1200 L100,1050 Q90,1020 80,1050 Z"/>
+
+    <!-- Blossom clusters - muted purple/pink -->
+    <path android:fillColor="#9B7FA8" android:fillAlpha="0.8"
+        android:pathData="M90,1000 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0"/>
+    <path android:fillColor="#8A6E98" android:fillAlpha="0.7"
+        android:pathData="M40,1040 m-50,0 a50,50 0 1,0 100,0 a50,50 0 1,0 -100,0"/>
+    <path android:fillColor="#A888B0" android:fillAlpha="0.7"
+        android:pathData="M145,1030 m-55,0 a55,55 0 1,0 110,0 a55,55 0 1,0 -110,0"/>
+
+    <!-- Water/lake -->
+    <path android:fillColor="#16163A" android:fillAlpha="0.9"
+        android:pathData="M0,1200 L1080,1200 L1080,1920 L0,1920 Z"/>
+
+    <!-- Moon reflection -->
+    <path android:fillColor="#FFE8A0" android:fillAlpha="0.2"
+        android:pathData="M750,1320 m-90,0 a90,20 0 1,0 180,0 a90,20 0 1,0 -180,0"/>
+
+    <!-- Fireflies -->
+    <path android:fillColor="#DCFF96" android:fillAlpha="0.8"
+        android:pathData="M300,800 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0"/>
+    <path android:fillColor="#DCFF96" android:fillAlpha="0.7"
+        android:pathData="M500,700 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+    <path android:fillColor="#DCFF96" android:fillAlpha="0.75"
+        android:pathData="M700,850 m-5,0 a5,5 0 1,0 10,0 a5,5 0 1,0 -10,0"/>
+
+</vector>
