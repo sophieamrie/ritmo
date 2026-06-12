@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Full bleed night scenery background -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sceneryBackground"
         android:layout_width="match_parent"
@@ -59,207 +58,224 @@
 
     </LinearLayout>
 
-    <!-- Floating bottom panel -->
-    <androidx.cardview.widget.CardView
+    <!-- Bottom Sheet -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="370dp"
-        android:layout_gravity="bottom"
-        app:cardCornerRadius="28dp"
-        app:cardElevation="16dp"
-        app:cardBackgroundColor="#E8FFFFFF">
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_peekHeight="380dp"
+        app:behavior_hideable="false"
+        app:behavior_fitToContents="true">
 
-        <LinearLayout
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:paddingTop="14dp"
-            android:paddingBottom="0dp">
+            app:cardCornerRadius="28dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="?attr/colorSurface">
 
-            <!-- Handle -->
-            <View
-                android:layout_width="36dp"
-                android:layout_height="4dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="14dp"
-                android:background="#263D3530"/>
-
-            <!-- Week tracker label -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="THIS WEEK"
-                android:textColor="#9B8E87"
-                android:textSize="10sp"
-                android:letterSpacing="0.12"
-                android:fontFamily="@font/nunito_extrabold"
-                android:layout_marginBottom="8dp"/>
-
-            <!-- Week dots -->
             <LinearLayout
-                android:id="@+id/weekDotsContainer"
                 android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="16dp"
-                android:weightSum="7">
-
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
-                <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/dot_filled" android:backgroundTint="#E0EDD9"/>
-
-            </LinearLayout>
-
-            <!-- Habits label -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TODAY'S HABITS"
-                android:textColor="#9B8E87"
-                android:textSize="10sp"
-                android:letterSpacing="0.12"
-                android:fontFamily="@font/nunito_extrabold"
-                android:layout_marginBottom="10dp"/>
-
-            <!-- Empty state -->
-            <LinearLayout
-                android:id="@+id/emptyStateHabit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:padding="32dp"
-                android:visibility="gone">
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="80dp">
+
+                <View
+                    android:layout_width="36dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="14dp"
+                    android:background="#263D3530"/>
+
+                <!-- Add habit + THIS WEEK row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="THIS WEEK"
+                        android:textColor="#9B8E87"
+                        android:textSize="10sp"
+                        android:letterSpacing="0.12"
+                        android:fontFamily="@font/nunito_extrabold"/>
+
+                    <TextView
+                        android:id="@+id/fabAddHabit"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:text="+"
+                        android:textSize="24sp"
+                        android:gravity="center"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/bg_fab_habit"/>
+
+                </LinearLayout>
+
+                <!-- Week dots -->
+                <LinearLayout
+                    android:id="@+id/weekDotsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:weightSum="7">
+
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginEnd="4dp" android:background="@drawable/dot_filled" android:backgroundTint="#A8C5A0"/>
+                    <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/dot_filled" android:backgroundTint="#E0EDD9"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="🌿"
-                    android:textSize="48sp"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="No habits yet!"
-                    android:textSize="16sp"
-                    android:textColor="#3D3530"
-                    android:fontFamily="@font/lora_semibold"
-                    android:layout_marginBottom="6dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Start building good habits today"
-                    android:textSize="12sp"
+                    android:text="TODAY'S HABITS"
                     android:textColor="#9B8E87"
-                    android:fontFamily="@font/nunito_extrabold"/>
+                    android:textSize="10sp"
+                    android:letterSpacing="0.12"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:layout_marginBottom="10dp"/>
+
+                <!-- Empty state -->
+                <LinearLayout
+                    android:id="@+id/emptyStateHabit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="32dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌿"
+                        android:textSize="48sp"
+                        android:layout_marginBottom="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No habits yet!"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/lora_semibold"
+                        android:layout_marginBottom="6dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start building good habits today"
+                        android:textSize="12sp"
+                        android:textColor="#9B8E87"
+                        android:fontFamily="@font/nunito_extrabold"/>
+
+                </LinearLayout>
+
+                <!-- Habit list -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvHabits"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:clipToPadding="false"
+                    android:paddingBottom="8dp"/>
 
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
 
-            <!-- Habit list -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvHabits"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:clipToPadding="false"
-                android:paddingBottom="8dp"/>
+    <!-- Floating Bottom Nav Pill -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="32dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="?attr/colorSurface">
 
-            <!-- Bottom nav -->
-            <!-- Bottom nav -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp">
+                android:id="@+id/navTasks"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_task"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tasks"
+                    android:textColor="#9B8E87"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/navTasks"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_task"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tasks"
-                        android:textColor="#9B8E87"
-                        android:textSize="9sp"
-                        android:fontFamily="@font/nunito_extrabold"
-                        android:layout_marginTop="2dp"/>
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/navHabits"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_habit"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Habits"
+                    android:textColor="#F2A58E"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/navHabits"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_habit"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Habits"
-                        android:textColor="#F2A58E"
-                        android:textSize="9sp"
-                        android:fontFamily="@font/nunito_extrabold"
-                        android:layout_marginTop="2dp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/navWeather"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:src="@drawable/ic_weather"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Weather"
-                        android:textColor="#9B8E87"
-                        android:textSize="9sp"
-                        android:fontFamily="@font/nunito_extrabold"
-                        android:layout_marginTop="2dp"/>
-                </LinearLayout>
-
+            <LinearLayout
+                android:id="@+id/navWeather"
+                android:layout_width="72dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_weather"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Weather"
+                    android:textColor="#9B8E87"
+                    android:textSize="9sp"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:layout_marginTop="2dp"/>
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-    <!-- FAB -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabAddHabit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="386dp"
-        app:backgroundTint="#A8C5A0"
-        app:tint="@android:color/white"
-        android:src="@android:drawable/ic_input_add"
-        app:elevation="8dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

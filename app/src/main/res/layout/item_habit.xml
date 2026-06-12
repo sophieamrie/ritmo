@@ -7,7 +7,7 @@
     android:layout_marginBottom="8dp"
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp"
-    app:cardBackgroundColor="#FFFFFF">
+    app:cardBackgroundColor="?attr/colorSurface">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +40,6 @@
                 android:layout_height="wrap_content"
                 android:text="Habit name"
                 android:textSize="13sp"
-                android:textColor="#3D3530"
                 android:fontFamily="@font/nunito_extrabold"/>
 
             <TextView
@@ -55,12 +54,11 @@
 
         </LinearLayout>
 
-        <!-- Checkbox -->
-        <CheckBox
+        <FrameLayout
             android:id="@+id/checkHabit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:buttonTint="#A8C5A0"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/bg_checkbox_unchecked"
             android:layout_marginEnd="8dp"/>
 
         <!-- Delete button -->

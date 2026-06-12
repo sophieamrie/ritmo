@@ -4,156 +4,170 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="24dp"
     android:background="@drawable/bg_dialog">
 
-    <!-- Title -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add New Habit"
-        android:textSize="18sp"
-        android:textColor="#3D3530"
-        android:fontFamily="@font/lora_semibold"
-        android:layout_marginBottom="20dp"/>
-
-    <!-- Habit title input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Habit title"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="12dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etHabitTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_extrabold"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Habit description input -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Description (optional)"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_marginBottom="16dp">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etHabitDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_extrabold"/>
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <!-- Emoji picker -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ICON"
-        android:textSize="10sp"
-        android:textColor="#9B8E87"
-        android:fontFamily="@font/nunito_extrabold"
-        android:letterSpacing="0.12"
-        android:layout_marginBottom="8dp"/>
-
+    <!-- Gradient header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp">
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/bg_dialog_header_habit">
 
-        <Button
-            android:id="@+id/btnEmojiStar"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="⭐"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Habit"
             android:textSize="20sp"
-            android:backgroundTint="#FFF8E8"/>
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/lora_semibold"/>
 
-        <Button
-            android:id="@+id/btnEmojiWater"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="💧"
-            android:textSize="20sp"
-            android:backgroundTint="#E8F4FF"
-            android:alpha="0.5"/>
-
-        <Button
-            android:id="@+id/btnEmojiBook"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="📖"
-            android:textSize="20sp"
-            android:backgroundTint="#EDE8F8"
-            android:alpha="0.5"/>
-
-        <Button
-            android:id="@+id/btnEmojiRun"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="🏃"
-            android:textSize="20sp"
-            android:backgroundTint="#E8F8EE"
-            android:alpha="0.5"/>
-
-        <Button
-            android:id="@+id/btnEmojiMed"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="4dp"
-            android:text="🧘"
-            android:textSize="20sp"
-            android:backgroundTint="#FDE8DF"
-            android:alpha="0.5"/>
-
-        <Button
-            android:id="@+id/btnEmojiSleep"
-            android:layout_width="0dp"
-            android:layout_height="44dp"
-            android:layout_weight="1"
-            android:text="😴"
-            android:textSize="20sp"
-            android:backgroundTint="#EDE8F8"
-            android:alpha="0.5"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Build a new daily routine"
+            android:textSize="11sp"
+            android:textColor="#DDFFFFFF"
+            android:fontFamily="@font/nunito_extrabold"
+            android:layout_marginTop="4dp"/>
 
     </LinearLayout>
 
-    <!-- Buttons -->
+    <!-- Body -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Habit title input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Habit title"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="12dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHabitTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extrabold"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Habit description input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description (optional)"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etHabitDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_extrabold"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Icon picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ICON"
+            android:textSize="10sp"
+            android:textColor="#9B8E87"
+            android:fontFamily="@font/nunito_extrabold"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/btnEmojiStar"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="⭐"
+                android:textSize="20sp"
+                android:backgroundTint="#FFF8E8"/>
+
+            <Button
+                android:id="@+id/btnEmojiWater"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="💧"
+                android:textSize="20sp"
+                android:backgroundTint="#E8F4FF"/>
+
+            <Button
+                android:id="@+id/btnEmojiBook"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="📖"
+                android:textSize="20sp"
+                android:backgroundTint="#EDE8F8"/>
+
+            <Button
+                android:id="@+id/btnEmojiRun"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="🏃"
+                android:textSize="20sp"
+                android:backgroundTint="#E8F8EE"/>
+
+            <Button
+                android:id="@+id/btnEmojiMed"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:text="🧘"
+                android:textSize="20sp"
+                android:backgroundTint="#FDE8DF"/>
+
+            <Button
+                android:id="@+id/btnEmojiSleep"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="😴"
+                android:textSize="20sp"
+                android:backgroundTint="#EDE8F8"/>
+
+        </LinearLayout>
+
+        <!-- Save button -->
+        <Button
+            android:id="@+id/btnSaveHabit"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Save Habit"
+            android:fontFamily="@font/nunito_extrabold"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:backgroundTint="#A8C5A0"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="8dp"/>
 
         <Button
             android:id="@+id/btnCancelHabit"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="8dp"
             android:text="Cancel"
             android:fontFamily="@font/nunito_extrabold"
-            android:backgroundTint="#F3EFEA"
-            android:textColor="#9B8E87"/>
-
-        <Button
-            android:id="@+id/btnSaveHabit"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Save"
-            android:fontFamily="@font/nunito_extrabold"
-            android:backgroundTint="#A8C5A0"
-            android:textColor="#FFFFFF"/>
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="#9B8E87"
+            android:elevation="0dp"/>
 
     </LinearLayout>
 
